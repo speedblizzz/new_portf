@@ -1,19 +1,48 @@
 mainFont = 'Roboto', sans-serif;
 secondFont = 'Roboto Slab', serif;
 textColor = #000;
-mainColor = #4caf50;
-hoverColor = #51ba55;
-secondColor = #82b541;
-linkColor = #7a7a7a;
+linksColor = #222;
+headersColor = #222;
 backgroundColor = #fff;
-borderColor = #68d323;
-lightBorderColor = #e3e3e3
+
+headersSize = 30px
 
 
 *
   box-sizing border-box
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: secondFont;
+  line-height: 1;
+  color: headersColor;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  margin-top: 0;
+}
 
+h1 {
+  font-size: headersSize;
+}
+
+h2 {
+  font-size: headersSize - 4;
+}
+
+h3 {
+  font-size: headersSize - 6;
+}
+
+h4 {
+  font-size: headersSize - 8;
+}
+
+h5 {
+  font-size: headersSize - 10;
+}
+
+h6 {
+  font-size: headersSize - 12;
+}
 body
   font-family: mainFont
   margin: 0;
@@ -27,4 +56,5 @@ body
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+
 
