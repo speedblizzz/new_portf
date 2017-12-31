@@ -38,12 +38,32 @@
 .footer .row {
   display: block;
 }
+
+.footer .row {
+  display: block;
+}
+
+.row, .content-area {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+@media (min-width: 1200px)
+  .row, .content-area
+    width: 1150px;
+
+@media (min-width: 1000px)
+  .row, .content-area
+    width: 930px;
+
+
 .footer .site-info,
-.footer .social {
+.footer .social
   display: inline-block;
   width: 48%;
   vertical-align: top;
-}
+
 @media (max-width: 999px) {
   .footer .site-info,
   .footer .social {
