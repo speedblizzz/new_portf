@@ -1,6 +1,16 @@
 .title {
+  display: flex
+  flex-flow: row wrap
   margin-bottom: 30px;
 }
+@media (min-width: 700px)
+  .title {
+    margin-bottom: 80px;
+  }
+@media (min-width: 1000px)
+  .title {
+    margin-bottom: 100px;
+  }
 
 .title .title-wrapper {
   width: 100%;
@@ -8,14 +18,30 @@
   float: none;
   margin-bottom: 28px;
 }
-
+@media (min-width: 700px)
+  .title .title-wrapper {
+    margin-bottom: 40px;
+  }
+@media (min-width: 999px)
+  .title .title-wrapper {
+    width: 50%;
+    margin-bottom: 0;
+  }
 .title-wrapper .entry-title {
   font-size: 34px;
   letter-spacing: -1px;
   margin: 0;
 }
 
+@media (min-width: 700px)
+  .title-wrapper .entry-title {
+    font-size: 44px;
+  }
 
+@media (min-width: 1000px)
+  .title-wrapper .entry-title {
+    font-size: 48px;
+  }
 .title-wrapper .entry-title span.hide-title {
   overflow: hidden;
   display: block;
@@ -41,6 +67,11 @@
   line-height: 1.4em;
   color: #444;
 }
+
+@media (min-width: 700px)
+  .title .description-wrapper {
+    font-size: 19px;
+  }
 
 @media (max-width: 999px)
   .title .description-wrapper {
