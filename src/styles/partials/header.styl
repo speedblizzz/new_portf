@@ -101,17 +101,18 @@
 
 
 .logo_part_4
-  animation-name slideInLeft,hideAfterSlide
+  animation-name slideInLeft,hideRotateAfterSlide
   animation-delay 0s,1.7s
-  animation-duration: 1.1s,0.4s;
+  animation-duration: 1.1s,0.7s;
   animation-fill-mode: both;
   animation-timing-function ease,ease
 
 .site-logo
   position: absolute
+  left 12px
   animation showAfterSlide
   animation-duration: 1s;
-  animation-delay 1.9s
+  animation-delay 2s
   animation-fill-mode: both;
   transition: transform 1s;
 
@@ -149,6 +150,10 @@
 
     opacity: 1;
     visibility visible
+
+  }
+
+  5% {
 
   }
 
@@ -194,19 +199,19 @@
     transition: transform 0.4s cubic-bezier(0.64, 0.01, 0.28, 1)
 
 .logo-menu-wrapper .mobile
-  display: table-cell;
-  vertical-align: middle;
+  display: block;
 
 .logo-menu-wrapper .mobile
   width: 24px;
-  height: auto;
+  height: 20px;
   display: none;
   cursor: pointer;
   position: relative;
 
 @media (max-width: 1199px)
   .logo-menu-wrapper .mobile
-    display: table-cell;
+    display: block;
+    padding-top: 9px
 
 .logo-menu-wrapper .mobile span
   width: 12px;
@@ -331,8 +336,7 @@ a
 
 body:not(.menu-sb) .site-header-menu ul.primary-menu .current-menu-item > a:after,
 body:not(.menu-sb) .site-header-menu ul.primary-menu .current-menu-parent > a:after
-  opacity: 1;
-  transform: scale(1);
+  right 0
 
 
 
@@ -342,10 +346,11 @@ body:not(.menu-sb) .site-header-menu ul.primary-menu .current-menu-parent > a:af
 
 
 @media (max-width: 1199px)
-  .site-header-menu ul.primary-menu a {
+  .site-header-menu ul.primary-menu a
     padding: 5px;
     display: inline-block;
-  }
+    &:hover
+      color: mainColor
 
 
 
@@ -355,18 +360,17 @@ body:not(.menu-sb) .site-header-menu ul.primary-menu .current-menu-parent > a:af
     position: absolute;
     top: -6px;
     border-bottom: 2px solid;
-    border-color: #333;
+    border-color: mainColor;
     left: 0;
-    right: 0;
-    opacity: 0;
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.21, 1.1), opacity 0.2s cubic-bezier(0.4, 0, 0.21, 1.1);
+    right: 100%;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.21, 1.1)
 
-    transform: scale(0);
+    /*transform: scale(0);*/
   }
   .site-header-menu ul.primary-menu  > li:hover > a:after
-    opacity: 1;
-    transform: scale(1);
-    color: #055
+    right 0
+    /*transform: scale(1);*/
+    /*color: #055*/
 
 
 
